@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter as Router, Route, Routes} from 'react-router-dom';
 import HomePage from './Pages/HomePage.jsx';
 import AboutPage from './Pages/AboutPage.jsx';
 import ProjectsPage from './Pages/ProjectsPage.jsx';
@@ -46,7 +46,7 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -54,7 +54,7 @@ const App = () => {
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 
